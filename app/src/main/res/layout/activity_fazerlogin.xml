@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/colorPrimary01"
+
+    tools:context=".fazerlogin">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/mattaleao" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="300dp"
+        >
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="100dp"
+            android:paddingTop="203dp">
+
+            <Button
+                android:id="@+id/botaologinid"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="logaragora"
+                android:paddingLeft="2dp"
+
+                android:paddingRight="20dp"
+                android:text="Logar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+android:paddingTop="50dp"
+                android:text="Cadastra-se"
+                android:gravity="center"
+                android:onClick="abrircadastro"
+                android:textSize="30sp"></TextView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="298dp"
+        android:paddingLeft="43dp"
+
+        >
+
+        <EditText
+            android:id="@+id/emailid"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+
+            android:hint="Email"></EditText>
+        <EditText
+            android:id="@+id/senhaid"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="111dp"
+
+
+            android:hint="Senha"></EditText>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
