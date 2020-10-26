@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +15,7 @@ import com.devoligastudio.chatbot.R;
 import com.devoligastudio.chatbot.model.ChatMessage;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ChatMessageAdapter extends ArrayAdapter<ChatMessage> {
 
@@ -49,7 +49,7 @@ public class ChatMessageAdapter extends ArrayAdapter<ChatMessage> {
             convertView = LayoutInflater.from(getContext())
                     .inflate(R.layout.user_query,parent,false);
 
-            TextView textView = convertView.findViewById(R.id.text);
+            TextView textView = convertView.findViewById(R.id.texti);
             textView.setText(getItem(position).getContent());
         }
         else if(viewType == BOT_MESSAGE){
@@ -57,7 +57,8 @@ public class ChatMessageAdapter extends ArrayAdapter<ChatMessage> {
                     .inflate(R.layout.bot_query,parent,false);
 
             TextView textView = convertView.findViewById(R.id.text);
-            textView.setText(getItem(position).getContent());
+            textView.setText(Objects.requireNonNull(getItem(position)).getContent());
+            //getContent()
         }
 
         convertView.findViewById(R.id.chatMessageView).setOnClickListener(new View.OnClickListener() {
