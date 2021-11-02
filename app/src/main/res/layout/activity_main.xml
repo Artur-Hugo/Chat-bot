@@ -7,20 +7,28 @@
     android:paddingTop="16dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    
+
+    <include
+        android:id="@+id/tb_conversa"
+        layout="@layout/toolbar"
+        ></include>
+
     <ListView
         android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="@null"
-        ></ListView>
-        <LinearLayout
+        android:layout_width="392dp"
+        android:layout_height="595dp"
+        android:layout_above="@+id/send_message_laypat"
+        android:layout_marginBottom="5dp"
+        android:divider="@null"></ListView>
+
+    <LinearLayout
             android:id="@+id/send_message_laypat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:background="#FFFFDDDD"
+            android:scrollbarStyle="outsideOverlay"
 
             android:gravity="center_vertical"
 

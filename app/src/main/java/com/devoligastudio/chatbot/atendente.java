@@ -71,8 +71,10 @@ public class atendente extends AppCompatActivity {
         }
 // Configura toolbar
         toolbar.setTitle(nomeUsuarioDestinatario);
-        toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp);
+        //toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp);
         setSupportActionBar(toolbar);
+
+
 
         btMensagem.setOnClickListener(new View.OnClickListener() {
             @Override

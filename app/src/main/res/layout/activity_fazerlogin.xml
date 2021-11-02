@@ -87,17 +87,28 @@ android:paddingTop="50dp"
 
 
             android:hint="Email"></EditText>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="398dp"
+        android:paddingLeft="43dp"
+
+        >
+
         <EditText
             android:id="@+id/senhaid"
             android:layout_width="300dp"
+            android:inputType="textPassword"
             android:layout_height="wrap_content"
-            android:paddingTop="111dp"
 
 
-            android:hint="Senha"></EditText>
+            android:hint="senha"></EditText>
 
     </RelativeLayout>
-
 
 
 </RelativeLayout>

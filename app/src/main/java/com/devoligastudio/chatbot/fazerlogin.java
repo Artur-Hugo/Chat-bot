@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,6 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 public class fazerlogin extends AppCompatActivity {
 
     EditText senha, email;
+    private FirebaseUser user;
     private FirebaseAuth autenticacao;
     private Usuario usuario;
     private DatabaseReference firebase;
@@ -38,26 +40,39 @@ public class fazerlogin extends AppCompatActivity {
 email = findViewById(R.id.emailid);
 senha = findViewById(R.id.senhaid);
 
-        verificarUsuarioLogado();
+        //verificarUsuarioLogado();
 
     }
 
     private void verificarUsuarioLogado() {
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-         if( autenticacao.getCurrentUser() != null ) {
-            /*if(usuario.getEmail().equals("atendentemaster@hotmail.com")){
+        if( autenticacao.getCurrentUser() != null ) {
+            String emaili = user.getEmail();;
+            if(emaili.equals("atendentemaster@hotmail.com")){
                 abrirTelaAtendente();
             }else {
 
                 abrirTelaPrincipal();
-            }
+            }}
+       /* if(user != null){
+
+
+
+         if( autenticacao.getCurrentUser() != null ) {
+             String emaili = user.getEmail();;
+             if(emaili.equals("atendentemaster@hotmail.com")){
+                abrirTelaAtendente();
+            }else {
+
+                abrirTelaPrincipal();
+           }}
 
 
         }*/
-             abrirTelaPrincipal();
+
          }
-    }
+
 
     private void abrirTelaAtendente() {
         Intent intent = new Intent(this,ListaDeConversa.class);
@@ -101,7 +116,7 @@ senha = findViewById(R.id.senhaid);
                             Preferencia preferencias = new Preferencia(fazerlogin.this);
 
 //Terá o Usuario salvo no aparelho
-                            preferencias.salvarDados( identificadorUsuarioLogado, usuariorecuperado.getNome() );
+                         //   preferencias.salvarDados( identificadorUsuarioLogado, usuariorecuperado.getNome() );
 
                         }
 
@@ -116,7 +131,7 @@ senha = findViewById(R.id.senhaid);
                         abrirTelaAtendente();
                         Toast.makeText(fazerlogin.this, "Sucesso ao fazer login!", Toast.LENGTH_LONG ).show();
                     }else{
-                        Toast.makeText(fazerlogin.this, "Erro ao fazer login!", Toast.LENGTH_LONG ).show();
+                        //Toast.makeText(fazerlogin.this, "Erro ao fazer login!", Toast.LENGTH_LONG ).show();
 
 
 
@@ -134,10 +149,16 @@ senha = findViewById(R.id.senhaid);
     }
     public void logaragora(View view){
 
+        if(email.getText().toString().trim().equals("") || senha.getText().toString().trim().equals("")){//como o tamanho é zero é nulla aresposta
+
+            Toast.makeText(fazerlogin.this, "Erro ao fazer login!", Toast.LENGTH_LONG ).show();
+
+        }else{
+
         usuario = new Usuario();
         usuario.setEmail( email.getText().toString() );
         usuario.setSenha( senha.getText().toString() );
         validarLogin();
-    }
+    }}
 
 }
