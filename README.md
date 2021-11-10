@@ -4,11 +4,12 @@
 <h1>Projeto Integrador/Uninove/2ºSemestre de 2020<h1>
 
 <h3>Projeto em que carreguei muito animal em meu grupo de projeto, no qual eu trabalhei tudo sozinho.</h3>
-<h6>Devido a falta de tempo não foquei muito no design e no bom funcionamento</h6>
+<h6>Devido a falta de tempo não foquei no design e no bom funcionamento</h6>
 <img align="center" alt="Artur-Android" height="96" width="320" src="https://github.com/Artur-Hugo/Chat-bot/blob/master/uninove.png" >
 
 <div  >
  <img class="d-flex justify-content-center" align="center" alt="Artur-Android" height="800" width="400" src="https://github.com/Artur-Hugo/Chat-bot/blob/master/chamattaleao.png" >
+ <img class="d-flex justify-content-center" align="center" alt="Artur-Android" height="800" width="400" src="https://github.com/Artur-Hugo/Chat-bot/blob/master/chamattaleao2.png" >
  </div>
  
  <h2>Desenvolvido com: </h2>
